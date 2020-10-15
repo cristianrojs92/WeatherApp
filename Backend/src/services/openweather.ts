@@ -21,7 +21,7 @@ export async function currentWeather(city : string){
 
     let data;
     //Obtenemos los datos con la 
-    const response = await axios.default.get(`${URL_OPENWEATHER}/weather?q=${city}&appid=${APIKEY_OPENWEATHER}`);
+    const response = await axios.default.get(`${URL_OPENWEATHER}/weather?q=${city}&units=imperial&appid=${APIKEY_OPENWEATHER}`);
     if(response.status === 200) {
       data = response.data;
     }
@@ -42,7 +42,7 @@ export async function forecastWeather(city : string){
 
     let data;
     //Obtenemos los datos con la 
-    const response = await axios.default.get(`${URL_OPENWEATHER}/forecast?q=${city}&appid=${APIKEY_OPENWEATHER}`);
+    const response = await axios.default.get(`${URL_OPENWEATHER}/forecast?q=${city}&units=imperial&appid=${APIKEY_OPENWEATHER}`);
     if(response.status === 200) {
       data = response.data;
     }
