@@ -22,10 +22,12 @@ export const WeatherCard = styled(Card)`
  * @desc WeatherContainer
  */
 export const WeatherContainer = styled(Card)`
-    margin: 20px;
+    margin: 10px 0px 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 `;
 
 /**
@@ -40,10 +42,11 @@ export const Header = styled.div`
  * @desc Body
  */
 export const Body = styled.div`
-    margin: 20px;
+    margin: 5px;
     display: flex;
     flex-direction: row;
     height: 200px;
+    justify-content: center;
 `;
 
 /**
@@ -68,6 +71,8 @@ export const NameCity = styled(Typography)`
  */
 export const Description = styled(Typography)`
     width: 500px;
+    margin-left: 20px !important;
+    margin-top: 2px !important;
 `;
 
 /**
@@ -78,6 +83,7 @@ export const TempBody = styled.div`
     height: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 `;
 
 /**
@@ -103,8 +109,12 @@ export const Temp = styled(Typography)`
  * @desc InfoContainer
  */
 export const InfoContainer = styled.div`
-    width: 50%;
+    width: 35%;
     height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
 `;
 
 /**

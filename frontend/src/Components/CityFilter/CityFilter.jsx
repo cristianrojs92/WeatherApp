@@ -3,16 +3,13 @@ import React from 'react';
 //Componentes
 import { FilterFormControl, FilterLaber, SelectCity, City } from './CityFilter.styles';
 
-
-
 function CityFilter({ onSelect }) {
-
   const onChange = (event) => {
     onSelect(event.target.value);
   };
 
   return (
-    <FilterFormControl variant="outlined">
+    <FilterFormControl>
     <FilterLaber id="select-city-label">Cuidad</FilterLaber>
       <SelectCity
         labelId="select-city-label"

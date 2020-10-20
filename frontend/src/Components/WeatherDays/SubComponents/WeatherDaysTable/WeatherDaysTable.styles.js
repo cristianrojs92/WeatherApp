@@ -44,6 +44,7 @@ export const WeatherTableRow = styled(TableRow)`
  * @desc WeatherTableContainer
  */
 export const WeatherTableContainer = styled(Paper)`
+    width: 50% !important;
 `;
 
 /**
