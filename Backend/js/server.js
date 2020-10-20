@@ -12,6 +12,7 @@ const express = require("express");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const routes_1 = require("./routes");
+const cors = require("cors");
 //Constantes de configuracion
 const config = require("./config");
 /**
@@ -22,6 +23,8 @@ async function start() {
     console.log(`server.js main: Servidor inicializado`);
     //Intanciamos la aplicacion de express
     const app = express();
+    //CORS
+    app.use(cors());
     //Middleware de seguridad: protege los headers http del servidor.
     app.use(helmet());
     //Se parsea el body a json

@@ -10,7 +10,7 @@ exports.forecast = exports.current = exports.location = void 0;
  */
 const ipapi = require("../services/ipapi");
 const openweather = require("../services/openweather");
-/**
+/** Devuelve la localizacion actual segun la ip del cliente
 *
 * @param req Request
 * @param res Response
@@ -36,7 +36,7 @@ async function location(req, res) {
     }
 }
 exports.location = location;
-/**
+/** Devuelve el estado del tiempo actual
  *
  * @param req Request
  * @param res Response
@@ -76,7 +76,7 @@ async function current(req, res) {
     }
 }
 exports.current = current;
-/**
+/**Devuelte el estado del tiempo durante los proximos 5 dias
 *
 * @param req Request
 * @param res Response

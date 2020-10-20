@@ -11,6 +11,7 @@ import * as express from "express";
 import * as helmet from "helmet";
 import * as bodyParser from "body-parser";
 import  routes from "./routes";
+import * as cors from "cors";
 
 //Constantes de configuracion
 import * as config from "./config";
@@ -25,6 +26,9 @@ async function start() {
 
   //Intanciamos la aplicacion de express
   const app : express.Express = express();
+
+  //CORS
+  app.use(cors())
 
   //Middleware de seguridad: protege los headers http del servidor.
   app.use(helmet());

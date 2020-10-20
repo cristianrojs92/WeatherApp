@@ -20,9 +20,13 @@
   "homepage": "https://github.com/cristianrojs92/WeatherApp#readme",
   "dependencies": {
     "@types/axios": "^0.14.0",
+    "@types/cors": "^2.8.8",
+    "@types/moment": "^2.13.0",
     "axios": "^0.20.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "helmet": "^4.1.0"
+    "helmet": "^4.1.0",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.7",

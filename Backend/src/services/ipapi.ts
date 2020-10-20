@@ -14,19 +14,20 @@ import { URL_IPAPI } from "../config";
  * 
  * @param ip ip
  */
-export async function location(ip : string){
-
+export async function location(ip : string) : Promise<Weather.Location>{
+  
+  let location : Weather.Location;
   try {
 
-    let data;
-    //Obtenemos los datos con la 
+    //Obtenemos la localizacion
     const response = await axios.default.get(`${URL_IPAPI}/${ip}`);
-    if(response.status === 200) {
-      data = response.data;
+    if(response.status === 200 && response.data) {
+      location = {
+        city : response.data.city
+      };
     }
-
-    return data;
   } catch (error) {
     console.error(`ipapi.js location: ${error}`);
   }
+  return location;
  }

@@ -1,37 +1,39 @@
 import React from 'react';
 
-import { WeatherContainer, WeatherHeader, WeatherContent, WeatherFooter,
-         WeatherLogo, NameCity, NameCoutry, WeatherTemp, TempContainer, Temp, WeatherInfo, Info } from "./WeatherMain.styles";
+import { WeatherContainer, WeatherCard, WeatherHeader, WeatherContent, WeatherFooter,
+         WeatherLogo, NameCity, Description, WeatherTemp, TempContainer, Temp, WeatherInfo, Info } from "./WeatherMain.styles";
 
-
-function WeatherMain() {
+function WeatherMain({weatherMain}) {
   return (
-    <WeatherContainer>
-      <WeatherHeader>
-        <NameCity variant="h4" gutterBottom>
-          {"San Francisco Solano"} 
-        </NameCity>
-        <NameCoutry variant="h6" gutterBottom>
-           {"Argentina"} 
-        </NameCoutry>
-      </WeatherHeader>
-      <WeatherContent>
-        <WeatherTemp>
-          <WeatherLogo src={"http://openweathermap.org/img/wn/10d@2x.png"}/>
-          <TempContainer>
-            <Temp variant="h4">20 C°</Temp>
-          </TempContainer>        
-        </WeatherTemp>
-        <WeatherInfo>
-          <Info>Temperatura minima 13 C°</Info>
-          <Info>Temperatura maxima 27 C°</Info>
-          <Info>Humedad 10 %</Info>
-        </WeatherInfo>
-      </WeatherContent>
-      <WeatherFooter>
+    weatherMain &&
+    <WeatherCard>
+      <WeatherContainer>
+        <WeatherHeader>
+          <NameCity variant="h4" gutterBottom>
+            {weatherMain.city} 
+          </NameCity>
+          <Description variant="h6" gutterBottom>
+            {weatherMain.description} 
+          </Description>
+        </WeatherHeader>
+        <WeatherContent>
+          <WeatherTemp>
+            <WeatherLogo src={weatherMain.urlIcon}/>
+            <TempContainer>
+              <Temp variant="h4">{`${weatherMain.temp} C°`}</Temp>
+            </TempContainer>        
+          </WeatherTemp>
+          <WeatherInfo>
+            <Info>{`Temperatura minima ${weatherMain.tempMin} C°`}</Info>
+            <Info>{`Temperatura maxima ${weatherMain.tempMax} C°`}</Info>
+            <Info>{`Humedad ${weatherMain.humidity} %`}</Info>
+          </WeatherInfo>
+        </WeatherContent>
+        <WeatherFooter>
 
-      </WeatherFooter>      
-    </WeatherContainer>
+        </WeatherFooter>      
+      </WeatherContainer>
+    </WeatherCard>
   );
 }
 

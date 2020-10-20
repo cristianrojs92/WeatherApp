@@ -8,24 +8,18 @@ import styled from "styled-components";
  */
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
+import TableContainer from '@material-ui/core/TableContainer';
 
 /**
- * @desc WeatherCard
+ * @desc WeatherTableContainer
  */
-export const WeatherCard = styled(Card)`
-    margin: 20px;
-    height: 230px;
-    width: 50%;
-`;
-
-/**
- * @desc WeatherContainer
- */
-export const WeatherContainer = styled(Card)`
+export const WeatherTableContainer = styled(TableContainer)`
     margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 480px;
+    width: 50% !important;
 `;
 
 /**
@@ -54,14 +48,6 @@ export const WeatherFooter = styled.div`
     flex-direction: row;
 `;
 
-/**
- * @desc WeatherLogo
- */
-export const WeatherLogo = styled.img`
-    height: 100px;
-    display: flex;
-    justify-content: center;
-`;
 
 /**
  * @desc NameCity
@@ -72,9 +58,9 @@ export const NameCity = styled(Typography)`
 `;
 
 /**
- * @desc Description
+ * @desc NameCoutry
  */
-export const Description = styled(Typography)`
+export const NameCoutry = styled(Typography)`
     width: 500px;
 `;
 
