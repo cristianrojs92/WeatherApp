@@ -9,23 +9,30 @@ function App() {
   const [weatherMain, setWeatherMain] = useState(null);
   const [weatherDays, setWeatherDays] = useState(null);
 
-  const getDataWeather = async () => {
-    const location = await WeatherAPI.getLocation();
-    const { city } = location;
+  const getWeather = async (city) => {
     const weatherMain = await WeatherAPI.getCurrentCity(city);
     const weatherDays = await WeatherAPI.getForecastCity(city);
-
     setWeatherMain(weatherMain);
     setWeatherDays(weatherDays);
   }
 
+  const onSelect = async (city) => {
+    await getWeather(city);
+  }
+
   useEffect(() => {
-    getDataWeather();
-  }, []);
+    const fetchFirtsDataWeather = async() => {
+      const location = await WeatherAPI.getLocation();
+      const { city } = location;
+      await getWeather(city);
+    };
+    fetchFirtsDataWeather();
+  },[]);
+  
   return (
     <AppContainer>
-      <CityFilter/>
-      <WeatherMain weatherMain={weatherMain}/>
+      <CityFilter onSelect={onSelect}/>
+      {weatherMain && <WeatherMain weatherMain={weatherMain}/>}
       <WeatherDays weatherDays={weatherDays}/>
     </AppContainer>
   );

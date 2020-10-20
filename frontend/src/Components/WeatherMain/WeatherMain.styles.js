@@ -29,29 +29,21 @@ export const WeatherContainer = styled(Card)`
 `;
 
 /**
- * @desc WeatherHeader
+ * @desc Header
  */
-export const WeatherHeader = styled.div`
+export const Header = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
 /**
- * @desc WeatherContent
+ * @desc Body
  */
-export const WeatherContent = styled.div`
+export const Body = styled.div`
     margin: 20px;
     display: flex;
     flex-direction: row;
     height: 200px;
-`;
-
-/**
- * @desc WeatherFooter
- */
-export const WeatherFooter = styled.div`
-    display: flex;
-    flex-direction: row;
 `;
 
 /**
@@ -79,9 +71,9 @@ export const Description = styled(Typography)`
 `;
 
 /**
- * @desc WeatherTemp
+ * @desc TempBody
  */
-export const WeatherTemp = styled.div`
+export const TempBody = styled.div`
     width: 200px;
     height: 100px;
     display: flex;
@@ -108,9 +100,9 @@ export const Temp = styled(Typography)`
 `;
 
 /**
- * @desc WeatherInfo
+ * @desc InfoContainer
  */
-export const WeatherInfo = styled.div`
+export const InfoContainer = styled.div`
     width: 50%;
     height: 100px;
 `;

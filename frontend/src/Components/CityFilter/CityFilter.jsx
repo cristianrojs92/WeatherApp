@@ -5,33 +5,29 @@ import { FilterFormControl, FilterLaber, SelectCity, City } from './CityFilter.s
 
 
 
-function WeatherMain() {
-  const [age, setAge] = React.useState('');
+function CityFilter({ onSelect }) {
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-    };
+  const onChange = (event) => {
+    onSelect(event.target.value);
+  };
+
   return (
     <FilterFormControl variant="outlined">
     <FilterLaber id="select-city-label">Cuidad</FilterLaber>
-    <SelectCity
-      labelId="select-city-label"
-      id="select-city-outlined"
-      value={age}
-      onChange={handleChange}
-      label="Age"
-    >
-      <City value="">
-        <em>Ninguna</em>
-      </City>
-      <City value={10}>Montreal</City>
-      <City value={20}>Chicago</City>
-      <City value={30}>Seattle</City>
-      <City value={30}>Yeongam-gun</City>
-      <City value={30}>Rahway</City>
-    </SelectCity>
+      <SelectCity
+        labelId="select-city-label"
+        id="select-city-outlined"
+        onChange={onChange}
+        label="City"
+      >
+        <City value={'Montreal'}>Montreal</City>
+        <City value={'Chicago'}>Chicago</City>
+        <City value={'Seattle'}>Seattle</City>
+        <City value={'Yeongam-gun'}>Yeongam-gun</City>
+        <City value={'Rahway'}>Rahway</City>
+      </SelectCity>
     </FilterFormControl>
   );
 }
 
-export default WeatherMain;
+export default CityFilter;
