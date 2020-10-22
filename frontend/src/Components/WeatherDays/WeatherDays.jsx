@@ -2,7 +2,7 @@ import React from 'react';
 import WeatherDaysTable from './SubComponents/WeatherDaysTable/WeatherDaysTable';
 function WeatherDays({ weatherDays }) {
   return (
-    weatherDays &&
+    Array.isArray(weatherDays) && weatherDays.length > 0 &&
     <WeatherDaysTable weatherDays={weatherDays}/>
   );
 }

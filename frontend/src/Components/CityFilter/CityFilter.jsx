@@ -3,7 +3,12 @@ import React from 'react';
 //Componentes
 import { FilterFormControl, FilterLaber, SelectCity, City } from './CityFilter.styles';
 
-function CityFilter({ onSelect }) {
+function CityFilter({ onSelect, cities }) {
+
+  if(!Array.isArray(cities) || (cities.length < 0)) {
+    return null;
+  }
+
   const onChange = (event) => {
     onSelect(event.target.value);
   };
@@ -17,11 +22,9 @@ function CityFilter({ onSelect }) {
         onChange={onChange}
         label="City"
       >
-        <City value={'Montreal'}>Montreal</City>
-        <City value={'Chicago'}>Chicago</City>
-        <City value={'Seattle'}>Seattle</City>
-        <City value={'Yeongam-gun'}>Yeongam-gun</City>
-        <City value={'Rahway'}>Rahway</City>
+        {
+          cities.map((city, index ) => <City key={index} value={city}>{city} </City>)
+        }
       </SelectCity>
     </FilterFormControl>
   );

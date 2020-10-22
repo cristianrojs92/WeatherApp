@@ -9,19 +9,19 @@ function Header() {
     <WeatherTableHead>
       <WeatherTableRow>
         {
-          header.map((text) => <WeatherTableCell align="center">{text}</WeatherTableCell>)
+          header.map((text,index) => <WeatherTableCell key={index} align="center">{text}</WeatherTableCell>)
         }
       </WeatherTableRow>
     </WeatherTableHead>
   );
-}
+}               
 
 function Body({weatherDays}) {
   return (
     <WeatherTableBody>
       {
-        weatherDays.map((weatherDay) => (
-          <WeatherTableRow key={weatherDay.date}>
+        weatherDays.map((weatherDay, index) => (
+          <WeatherTableRow key={index}>
             <WeatherTableCell>{weatherDay.date}</WeatherTableCell>
             <WeatherTableCell>
               <WeatherLogo src={weatherDay.urlIcon}/>

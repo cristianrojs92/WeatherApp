@@ -20,9 +20,11 @@ function WeatherTemp({urlIcon, temp}) {
   return (
     <TempBody>
       <WeatherLogo src={urlIcon}/>
-      <TempContainer>
+      { temp !== undefined &&
+        <TempContainer>
         <Temp variant="h4">{`${temp} C°`}</Temp>
-      </TempContainer>        
+        </TempContainer>  
+      }      
     </TempBody>
   );
 }
@@ -30,9 +32,18 @@ function WeatherTemp({urlIcon, temp}) {
 function WeatherInfo({tempMin, tempMax, humidity}) {
   return (
     <InfoContainer>
-      <Info>{`Temperatura minima ${tempMin} C°`}</Info>
-      <Info>{`Temperatura maxima ${tempMax} C°`}</Info>
-      <Info>{`Humedad ${humidity} %`}</Info>
+      {
+        tempMin !== undefined &&
+        <Info>{`Temperatura minima ${tempMin} C°`}</Info>
+      }
+      {
+        tempMax !== undefined &&
+        <Info>{`Temperatura maxima ${tempMax} C°`}</Info>
+      }
+      {
+        humidity !== undefined &&
+        <Info>{`Humedad ${humidity} %`}</Info>
+      }    
     </InfoContainer>
   );
 }
@@ -47,25 +58,29 @@ function WeatherBody({urlIcon, temp, tempMin, tempMax, humidity}) {
 }
 
 function WeatherMain({weatherMain}) {
-  const {
-          city,
-          description,
-          urlIcon,
-          temp,
-          tempMin,
-          tempMax,
-          humidity
-        } = weatherMain;
+    if(!weatherMain) {
+      return null;
+    }
 
-  return (
-    weatherMain &&
-    <WeatherCard>
-      <WeatherContainer>
-        <WeatherHeader city={city} description={description}/>
-        <WeatherBody urlIcon={urlIcon} temp={temp} tempMin={tempMin} tempMax={tempMax} humidity={humidity}/>   
-      </WeatherContainer>
-    </WeatherCard>
-  );
+    const {
+      city,
+      description,
+      urlIcon,
+      temp,
+      tempMin,
+      tempMax,
+      humidity
+    } = weatherMain || '';
+
+    return (
+      weatherMain &&
+      <WeatherCard>
+        <WeatherContainer>
+          <WeatherHeader city={city} description={description}/>
+          <WeatherBody urlIcon={urlIcon} temp={temp} tempMin={tempMin} tempMax={tempMax} humidity={humidity}/>   
+        </WeatherContainer>
+      </WeatherCard>
+    );
 }
 
 export default WeatherMain;
