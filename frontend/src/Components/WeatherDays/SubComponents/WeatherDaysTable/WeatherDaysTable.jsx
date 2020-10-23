@@ -40,7 +40,7 @@ function Body({weatherDays}) {
 function WeatherDaysTable({ weatherDays }) {
   return (
     weatherDays &&
-    <WeatherTableContainer>
+    <WeatherTableContainer variant="outlined">
       <WeatherTable>
         <Header/>
         <Body weatherDays={weatherDays}/>

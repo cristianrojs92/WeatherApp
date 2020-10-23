@@ -74,7 +74,7 @@ function WeatherMain({weatherMain}) {
 
     return (
       weatherMain &&
-      <WeatherCard>
+      <WeatherCard variant="outlined">
         <WeatherContainer>
           <WeatherHeader city={city} description={description}/>
           <WeatherBody urlIcon={urlIcon} temp={temp} tempMin={tempMin} tempMax={tempMax} humidity={humidity}/>   

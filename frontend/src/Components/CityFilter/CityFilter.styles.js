@@ -36,7 +36,6 @@ export const SelectCity = styled(Select)`
  * @desc City
  */
 export const City = styled(MenuItem)`
-
 `;
 
 
