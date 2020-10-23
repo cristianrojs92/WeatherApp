@@ -30,11 +30,11 @@ routes(app);
  */
 async function start() {
 
-  console.log(server.js main: Servidor inicializado);
+  console.log(`server.js main: Servidor inicializado`);
 
   //Inicia el servidor.
   app.listen(config.APP_PORT, () => {
-    console.log(server.js main: El servidor esta corriendo en http://localhost:${config.APP_PORT});
+    console.log(`server.js main: El servidor esta corriendo en http://localhost:${config.APP_PORT}`);
   })
 
 }

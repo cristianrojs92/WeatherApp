@@ -35,7 +35,7 @@ it("Redenriza los datos del tiempo actual", () => {
   });
 
   //Resultado esperado
-  const resultExpected = ${weatherMain.city}${weatherMain.description}${weatherMain.temp} C°Temperatura minima ${weatherMain.tempMin} C°Temperatura maxima ${weatherMain.tempMax} C°Humedad ${weatherMain.humidity} %;
+  const resultExpected = `${weatherMain.city}${weatherMain.description}${weatherMain.temp} C°Temperatura minima ${weatherMain.tempMin} C°Temperatura maxima ${weatherMain.tempMax} C°Humedad ${weatherMain.humidity} %`;
   expect(container.textContent).toBe(resultExpected);
 
   //Sin datos.

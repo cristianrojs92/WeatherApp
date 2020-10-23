@@ -32,7 +32,7 @@ const add = (app) => {
 * @param controller Funcion que resuelve la ruta
 */
 const addRoute = (app, method, version, routeName, controller) => {
-    const apiRoute = /${version}/${routeName};
+    const apiRoute = `/${version}/${routeName}`;
     const router = express.Router();
     switch (method) {
         case "GET" /* GET */:
@@ -49,7 +49,7 @@ const addRoute = (app, method, version, routeName, controller) => {
             break;
     }
     app.use(router);
-    console.log(Se agrega ruta: ${apiRoute} (HTTP = ${method}));
+    console.log(`Se agrega ruta: ${apiRoute} (HTTP = ${method})`);
 };
 exports.default = add;
 //# sourceMappingURL=weather.js.map

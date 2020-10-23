@@ -27,10 +27,10 @@ function Body({weatherDays}) {
               <WeatherLogo src={weatherDay.urlIcon}/>
             </WeatherTableCell>
             <WeatherTableCell>{weatherDay.description}</WeatherTableCell>
-            <WeatherTableCell>{${weatherDay.temp} C°}</WeatherTableCell>
-            <WeatherTableCell>{${weatherDay.tempMin} C°}</WeatherTableCell>
-            <WeatherTableCell>{${weatherDay.tempMax} C°}</WeatherTableCell>
-            <WeatherTableCell>{${weatherDay.humidity} %}</WeatherTableCell>
+            <WeatherTableCell>{`${weatherDay.temp} C°`}</WeatherTableCell>
+            <WeatherTableCell>{`${weatherDay.tempMin} C°`}</WeatherTableCell>
+            <WeatherTableCell>{`${weatherDay.tempMax} C°`}</WeatherTableCell>
+            <WeatherTableCell>{`${weatherDay.humidity} %`}</WeatherTableCell>
           </WeatherTableRow>))
       }
     </WeatherTableBody>

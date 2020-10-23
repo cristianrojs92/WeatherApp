@@ -13,14 +13,14 @@ export async function location(ip : string) : Promise<Weather.Location>{
   try {
 
     //Obtenemos la localizacion
-    const response = await axios.default.get(${URL_IPAPI}/${ip});
+    const response = await axios.default.get(`${URL_IPAPI}/${ip}`);
     if(response.status === 200 && response.data) {
       location = {
         city : response.data.city
       };
     }
   } catch (error) {
-    console.error(ipapi.js location: ${error});
+    console.error(`ipapi.js location: ${error}`);
   }
   return location;
  }

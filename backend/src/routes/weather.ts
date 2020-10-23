@@ -39,7 +39,7 @@ const add =  (app : express.Express) => {
  */
 const addRoute = (app : express.Express, method : Http.Method, version : string, routeName : string, controller : any) => {
 
-  const apiRoute = /${version}/${routeName};
+  const apiRoute = `/${version}/${routeName}`;
   const router = express.Router();
 
   switch (method) {
@@ -61,7 +61,7 @@ const addRoute = (app : express.Express, method : Http.Method, version : string,
   }
   
   app.use(router);
-  console.log(Se agrega ruta: ${apiRoute} (HTTP = ${method}))
+  console.log(`Se agrega ruta: ${apiRoute} (HTTP = ${method})`)
 }
 
 
