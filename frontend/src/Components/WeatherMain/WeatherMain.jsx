@@ -22,7 +22,7 @@ function WeatherTemp({urlIcon, temp}) {
       <WeatherLogo src={urlIcon}/>
       { temp !== undefined &&
         <TempContainer>
-        <Temp variant="h4">{`${temp} C°`}</Temp>
+        <Temp variant="h4">{${temp} C°}</Temp>
         </TempContainer>  
       }      
     </TempBody>
@@ -34,15 +34,15 @@ function WeatherInfo({tempMin, tempMax, humidity}) {
     <InfoContainer>
       {
         tempMin !== undefined &&
-        <Info>{`Temperatura minima ${tempMin} C°`}</Info>
+        <Info>{Temperatura minima ${tempMin} C°}</Info>
       }
       {
         tempMax !== undefined &&
-        <Info>{`Temperatura maxima ${tempMax} C°`}</Info>
+        <Info>{Temperatura maxima ${tempMax} C°}</Info>
       }
       {
         humidity !== undefined &&
-        <Info>{`Humedad ${humidity} %`}</Info>
+        <Info>{Humedad ${humidity} %}</Info>
       }    
     </InfoContainer>
   );

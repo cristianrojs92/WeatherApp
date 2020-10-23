@@ -24,10 +24,10 @@ weather_1.default(exports.app);
  *
  */
 async function start() {
-    console.log(`server.js main: Servidor inicializado`);
+    console.log(server.js main: Servidor inicializado);
     //Inicia el servidor.
     exports.app.listen(config.APP_PORT, () => {
-        console.log(`server.js main: El servidor esta corriendo en http://localhost:${config.APP_PORT}`);
+        console.log(server.js main: El servidor esta corriendo en http://localhost:${config.APP_PORT});
     });
 }
 // Ejecuta la inicializacion

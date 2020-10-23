@@ -48,13 +48,13 @@ it("Redenriza los datos del tiempo actual", () => {
   const columnsTable="DíaClimaDescripcionTemperaturaTemp. minTemp. maxHumedad";
 
   //Datos del pronostico de la primer fila
-  const firstRow = `${weatherDays[0].date}${weatherDays[0].description}${weatherDays[0].temp} C°${weatherDays[0].tempMin} C°${weatherDays[0].tempMax} C°${weatherDays[0].humidity} %`;
+  const firstRow = ${weatherDays[0].date}${weatherDays[0].description}${weatherDays[0].temp} C°${weatherDays[0].tempMin} C°${weatherDays[0].tempMax} C°${weatherDays[0].humidity} %;
   
   //Datos del pronosico de la segunda fila
-  const secondRow = `${weatherDays[1].date}${weatherDays[1].description}${weatherDays[1].temp} C°${weatherDays[1].tempMin} C°${weatherDays[1].tempMax} C°${weatherDays[1].humidity} %`;
+  const secondRow = ${weatherDays[1].date}${weatherDays[1].description}${weatherDays[1].temp} C°${weatherDays[1].tempMin} C°${weatherDays[1].tempMax} C°${weatherDays[1].humidity} %;
 
   //Resultado esperado
-  const resultExpected = `${columnsTable}${firstRow}${secondRow}`;
+  const resultExpected = ${columnsTable}${firstRow}${secondRow};
 
   expect(container.textContent).toBe(resultExpected);
 

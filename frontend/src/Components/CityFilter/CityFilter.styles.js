@@ -14,28 +14,28 @@ import MenuItem from '@material-ui/core/MenuItem';
 /**
  * @desc WeatherContainer
  */
-export const FilterFormControl = styled(FormControl)`
+export const FilterFormControl = styled(FormControl)
   width: 50% !important;
-`;
+;
 
 /**
  * @desc FilterLaber
  */
-export const FilterLaber = styled(InputLabel)`
+export const FilterLaber = styled(InputLabel)
 
-`;
+;
 
 /**
  * @desc SelectCity
  */
-export const SelectCity = styled(Select)`
+export const SelectCity = styled(Select)
 
-`;
+;
 
 /**
  * @desc City
  */
-export const City = styled(MenuItem)`
-`;
+export const City = styled(MenuItem)
+;
 
 

@@ -31,7 +31,7 @@ async function location(req, res) {
     }
     catch (error) {
         res.status(500 /* INTERNAL_ERROR */).json({ message: "Ocurrio un error al obtener la localizacion" });
-        console.error(`locations.js location: ${error}`);
+        console.error(locations.js location: ${error});
     }
 }
 exports.location = location;

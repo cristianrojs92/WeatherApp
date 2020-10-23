@@ -26,7 +26,7 @@ export async function location(req: Request, res: Response){
 
   } catch (error) {
     res.status(Http.StatusCode.INTERNAL_ERROR).json({message: "Ocurrio un error al obtener la localizacion"});
-    console.error(`locations.js location: ${error}`);
+    console.error(locations.js location: ${error});
   }
 
  }
@@ -70,7 +70,7 @@ export async function current(req: Request, res: Response){
     
   } catch (error) {
     res.status(Http.StatusCode.INTERNAL_ERROR).json({message: "Ocurrio un error al obtener la cuidad"});
-    console.error(`locations.js location: ${error}`);
+    console.error(locations.js location: ${error});
   }
 
  }
@@ -114,7 +114,7 @@ export async function forecast(req: Request, res: Response){
     
   } catch (error) {
     res.status(Http.StatusCode.INTERNAL_ERROR).json({message: "Ocurrio un error al obtener la cuidad"});
-    console.error(`locations.js location: ${error}`);
+    console.error(locations.js location: ${error});
   }
 
  }

@@ -13,14 +13,14 @@ async function currentWeather(city) {
     try {
         let currentWeather;
         //Obtenemos los datos del clima actual 
-        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/weather?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER}`);
+        const response = await axios.default.get(${config_1.URL_OPENWEATHER}/weather?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER});
         if (response.status === 200 && response.data) {
             currentWeather = parseWeatherData(city, response.data);
         }
         return currentWeather;
     }
     catch (error) {
-        console.error(`openweather.js currentWeather: ${error}`);
+        console.error(openweather.js currentWeather: ${error});
     }
 }
 exports.currentWeather = currentWeather;
@@ -32,7 +32,7 @@ async function forecastWeather(city) {
     try {
         let forecastWeather = [];
         //Obtenemos los datos con la 
-        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER}`);
+        const response = await axios.default.get(${config_1.URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER});
         if (response.status === 200 && response.data) {
             if (Array.isArray(response.data.list)) {
                 for (const item of response.data.list) {
@@ -50,7 +50,7 @@ async function forecastWeather(city) {
         return forecastWeather;
     }
     catch (error) {
-        console.error(`openweather.js forecast: ${error}`);
+        console.error(openweather.js forecast: ${error});
     }
 }
 exports.forecastWeather = forecastWeather;
@@ -78,7 +78,7 @@ function parseWeatherData(city, data) {
         };
     }
     catch (error) {
-        console.error(`openweather.js parseWeatherData: ${error}`);
+        console.error(openweather.js parseWeatherData: ${error});
     }
     return weather;
 }

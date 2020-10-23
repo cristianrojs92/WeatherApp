@@ -12,7 +12,7 @@ async function location(ip) {
     let location;
     try {
         //Obtenemos la localizacion
-        const response = await axios.default.get(`${config_1.URL_IPAPI}/${ip}`);
+        const response = await axios.default.get(${config_1.URL_IPAPI}/${ip});
         if (response.status === 200 && response.data) {
             location = {
                 city: response.data.city
@@ -20,7 +20,7 @@ async function location(ip) {
         }
     }
     catch (error) {
-        console.error(`ipapi.js location: ${error}`);
+        console.error(ipapi.js location: ${error});
     }
     return location;
 }

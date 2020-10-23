@@ -5,7 +5,7 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 export async function getLocation() {
   try {
     let location;
-    let url = `${API_BASE}/v1/location`;
+    let url = ${API_BASE}/v1/location;
     let response = await axios.default.get(url);
     if(response.status === 200) {
       location = response.data;
@@ -19,7 +19,7 @@ export async function getLocation() {
 export async function getCurrentCity(nameCity) {
   try {
     let city;
-    let url = (nameCity) ? `${API_BASE}/v1/current/${nameCity}` : `${API_BASE}/v1/current`;
+    let url = (nameCity) ? ${API_BASE}/v1/current/${nameCity} : ${API_BASE}/v1/current;
     let response = await axios.default.get(url);
     if(response.status === 200) {
       city = response.data;
@@ -33,7 +33,7 @@ export async function getCurrentCity(nameCity) {
 export async function getForecastCity(nameCity) {
   try {
     let forecast;
-    let url = (nameCity) ? `${API_BASE}/v1/forecast/${nameCity}` : `${API_BASE}/v1/forecast`;
+    let url = (nameCity) ? ${API_BASE}/v1/forecast/${nameCity} : ${API_BASE}/v1/forecast;
     let response = await axios.default.get(url);
     if(response.status === 200) {
       forecast = response.data;
