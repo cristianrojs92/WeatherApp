@@ -13,7 +13,7 @@ async function currentWeather(city) {
     try {
         let currentWeather;
         //Obtenemos los datos del clima actual 
-        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/weather?q=${city}&lang=es&units=imperial&appid=${config_1.APIKEY_OPENWEATHER}`);
+        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/weather?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER}`);
         if (response.status === 200 && response.data) {
             currentWeather = parseWeatherData(city, response.data);
         }
@@ -32,7 +32,7 @@ async function forecastWeather(city) {
     try {
         let forecastWeather = [];
         //Obtenemos los datos con la 
-        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=imperial&appid=${config_1.APIKEY_OPENWEATHER}`);
+        const response = await axios.default.get(`${config_1.URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=metric&appid=${config_1.APIKEY_OPENWEATHER}`);
         if (response.status === 200 && response.data) {
             if (Array.isArray(response.data.list)) {
                 for (const item of response.data.list) {
