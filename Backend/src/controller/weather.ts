@@ -1,4 +1,3 @@
-import * as requestIp from "request-ip";
 import * as ipapi from "../services/ipapi";
 import * as openweather from "../services/openweather";
 import { Response, Request } from "express";
@@ -12,7 +11,7 @@ export async function location(req: Request, res: Response){
 
   try {
 
-    const ip = requestIp.getClientIp(req);
+    const ip = req.ip;
 
     console.log(`ver log ip ${ip}`);
 
@@ -47,7 +46,7 @@ export async function current(req: Request, res: Response){
 
     //Si no nos especificaron la cuidad, utilizamos la actual segun su ip
     if(city === undefined) {
-      const ip = requestIp.getClientIp(req);
+      const ip = req.ip;
 
       //Obtenemos la localizacion segun la ip del cliente
       const data = await ipapi.location(ip);
