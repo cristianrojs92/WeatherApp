@@ -27,5 +27,13 @@ npm start
   
   #### Respuesta
 
-  `{ "city": "Quilmes","temp": 21,\n }`
+  `{ "city": "Quilmes",`
+  `  "temp": 21,`
+  `  "description": "nubes",`
+  `  "urlIcon": "http://openweathermap.org/img/wn/04d@2x.png",`
+  `  "tempMin": 20,`
+  `  "tempMax": 22,`
+  `  "humidity": 82,`
+  `  "date": "23/10/2020" }`
+  
 
