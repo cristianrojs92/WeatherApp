@@ -18,3 +18,14 @@ npm start
 
   `{ "city": "Quilmes" }`
 
+   ### Current
+  `Ruta 1: /v1/current`
+  `Ruta 2: /v1/current/:city`
+
+  `Metodo Http: GET`
+  `Descripcion: Metodo utilizado para obtener la informacion del clima actual segun la ip del cliente o cuidad`
+  
+  #### Respuesta
+
+  `{ "city": "Quilmes","temp": 21,\n }`
+
