@@ -15,7 +15,7 @@ export async function currentWeather(city : string) : Promise<Weather.Weather>{
     let currentWeather : Weather.Weather;
 
     //Obtenemos los datos del clima actual 
-    const response = await axios.default.get(`${URL_OPENWEATHER}/weather?q=${city}&lang=es&units=imperial&appid=${APIKEY_OPENWEATHER}`);
+    const response = await axios.default.get(`${URL_OPENWEATHER}/weather?q=${city}&lang=es&units=metric&appid=${APIKEY_OPENWEATHER}`);
     if(response.status === 200 && response.data) {
       currentWeather = parseWeatherData(city, response.data);
     }
@@ -36,7 +36,7 @@ export async function forecastWeather(city : string) : Promise<Array<Weather.Wea
 
     let forecastWeather : Array<Weather.Weather> = [];
     //Obtenemos los datos con la 
-    const response = await axios.default.get(`${URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=imperial&appid=${APIKEY_OPENWEATHER}`);
+    const response = await axios.default.get(`${URL_OPENWEATHER}/forecast?q=${city}&lang=es&units=metric&appid=${APIKEY_OPENWEATHER}`);
     if(response.status === 200 && response.data) {
       if(Array.isArray(response.data.list)) {
         for (const item of response.data.list) {

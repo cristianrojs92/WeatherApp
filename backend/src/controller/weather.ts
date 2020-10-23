@@ -89,9 +89,7 @@ export async function forecast(req: Request, res: Response){
 
     //Si no nos especificaron la cuidad, utilizamos la actual segun su ip
     if(city === undefined) {
-      //TODO: Quitar ip de prueba
-      const ip = "181.46.137.30";
-      //const ip = req.ip;
+      const ip = requestIp.getClientIp(req);
 
       //Obtenemos la localizacion segun la ip del cliente
       const data = await ipapi.location(ip);

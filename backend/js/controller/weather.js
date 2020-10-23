@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.forecast = exports.current = exports.location = void 0;
+const requestIp = require("request-ip");
 const ipapi = require("../services/ipapi");
 const openweather = require("../services/openweather");
 /** Devuelve la localizacion actual segun la ip del cliente
@@ -10,8 +11,7 @@ const openweather = require("../services/openweather");
 */
 async function location(req, res) {
     try {
-        const ip = req.ip;
-        console.log(`ver log ip ${ip}`);
+        const ip = requestIp.getClientIp(req);
         //Obtenemos la localizacion segun la ip del cliente
         const data = await ipapi.location(ip);
         //Si obtuvimos datos resondemos la solicitud
@@ -39,7 +39,7 @@ async function current(req, res) {
         let { city } = req.params;
         //Si no nos especificaron la cuidad, utilizamos la actual segun su ip
         if (city === undefined) {
-            const ip = req.ip;
+            const ip = requestIp.getClientIp(req);
             //Obtenemos la localizacion segun la ip del cliente
             const data = await ipapi.location(ip);
             //Si obtuvimos datos resondemos la solicitud
@@ -77,9 +77,7 @@ async function forecast(req, res) {
         let { city } = req.params;
         //Si no nos especificaron la cuidad, utilizamos la actual segun su ip
         if (city === undefined) {
-            //TODO: Quitar ip de prueba
-            const ip = "181.46.137.30";
-            //const ip = req.ip;
+            const ip = requestIp.getClientIp(req);
             //Obtenemos la localizacion segun la ip del cliente
             const data = await ipapi.location(ip);
             //Si obtuvimos datos resondemos la solicitud
