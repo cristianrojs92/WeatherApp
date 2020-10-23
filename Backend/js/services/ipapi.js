@@ -1,13 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.location = void 0;
-/*
- * ipapi.ts
- *
-* Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
 const axios = require("axios");
 //Configuraciones
 const config_1 = require("../config");

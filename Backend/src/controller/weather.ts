@@ -1,10 +1,3 @@
-/*
- * locations.ts
- *
-* Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
 import * as ipapi from "../services/ipapi";
 import * as openweather from "../services/openweather";
 import { Response, Request } from "express";
@@ -18,9 +11,8 @@ export async function location(req: Request, res: Response){
 
   try {
 
-    //TODO: Quitar ip de prueba
-    const ip = "181.46.137.30";
-    //const ip = req.ip;
+    const ip = req.ip;
+    console.log(`ver log ip ${ip}`);
 
     //Obtenemos la localizacion segun la ip del cliente
     const data = await ipapi.location(ip);
@@ -53,9 +45,7 @@ export async function current(req: Request, res: Response){
 
     //Si no nos especificaron la cuidad, utilizamos la actual segun su ip
     if(city === undefined) {
-      //TODO: Quitar ip de prueba
-      const ip = "181.46.137.30";
-      //const ip = req.ip;
+      const ip = req.ip;
 
       //Obtenemos la localizacion segun la ip del cliente
       const data = await ipapi.location(ip);

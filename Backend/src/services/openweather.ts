@@ -1,11 +1,3 @@
-/*
- * openweather.ts
- *
- * Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
-
 import * as axios from "axios";
 import * as moment from "moment";
 
@@ -89,7 +81,6 @@ function parseWeatherData(city : string, data : any) : Weather.Weather{
       temp : format(data.main.temp),
       description: data.weather[0].description,
       urlIcon: URL_OPENWEATHER_ICON.replace('{icon}',data.weather[0].icon),
-      feelsLike: format(data.main.feels_like),
       tempMin: format(data.main.temp_min),
       tempMax: format(data.main.temp_max), 
       humidity: format(data.main.humidity),

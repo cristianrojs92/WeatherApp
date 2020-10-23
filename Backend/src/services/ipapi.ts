@@ -1,10 +1,3 @@
-/*
- * ipapi.ts
- *
-* Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
 import * as axios from "axios";
 
 //Configuraciones

@@ -1,16 +1,8 @@
-/*
- * index.ts
- *
-* Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
-
 //Dependencias
 import * as express from "express";
 
 //Controladores
-import { location, current, forecast } from "../controller";
+import { location, current, forecast } from "../controller/weather";
 
 /**
  * Esta funcion se encarga de agregar las rutas del servidor http

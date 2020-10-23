@@ -1,11 +1,4 @@
 "use strict";
-/*
- * config.ts
- *
- * Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.APIKEY_OPENWEATHER = exports.URL_OPENWEATHER_ICON = exports.URL_OPENWEATHER = exports.URL_IPAPI = exports.APP_PORT = void 0;
 //Puerto del servicio

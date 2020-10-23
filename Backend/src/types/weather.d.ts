@@ -9,7 +9,6 @@ declare namespace Weather {
     temp: number,
     description: string,
     urlIcon: string,
-    feelsLike: number,
     tempMin: number,
     tempMax: number, 
     humidity: number

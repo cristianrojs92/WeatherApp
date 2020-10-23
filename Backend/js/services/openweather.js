@@ -1,11 +1,4 @@
 "use strict";
-/*
- * openweather.ts
- *
- * Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.forecastWeather = exports.currentWeather = void 0;
 const axios = require("axios");
@@ -78,7 +71,6 @@ function parseWeatherData(city, data) {
             temp: format(data.main.temp),
             description: data.weather[0].description,
             urlIcon: config_1.URL_OPENWEATHER_ICON.replace('{icon}', data.weather[0].icon),
-            feelsLike: format(data.main.feels_like),
             tempMin: format(data.main.temp_min),
             tempMax: format(data.main.temp_max),
             humidity: format(data.main.humidity),

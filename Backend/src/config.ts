@@ -1,11 +1,3 @@
-/*
- * config.ts
- *
- * Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
-
 //Puerto del servicio
 export const APP_PORT = process.env.APP_PORT || 3001;
 

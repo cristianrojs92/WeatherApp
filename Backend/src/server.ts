@@ -1,20 +1,28 @@
-/*
- * server.ts
- *
- * Created on 14 de Octubre de 2020
- * Author Cristian Rojas <b>cristianrojs92@gmail.com</b>
- *
- */
-
 //Componentes
 import * as express from "express";
 import * as helmet from "helmet";
 import * as bodyParser from "body-parser";
-import  routes from "./routes";
+import  routes from "./routes/weather";
 import * as cors from "cors";
 
 //Constantes de configuracion
 import * as config from "./config";
+
+//Intanciamos la aplicacion de express
+export const app : express.Express = express();
+
+//CORS
+app.use(cors())
+
+//Middleware de seguridad: protege los headers http del servidor.
+app.use(helmet());
+
+//Se parsea el body a json
+app.use(bodyParser.json());
+
+//Se agregan las rutas.
+routes(app);
+
 
 /**
  * Inicializa el servidor
@@ -23,21 +31,6 @@ import * as config from "./config";
 async function start() {
 
   console.log(`server.js main: Servidor inicializado`);
-
-  //Intanciamos la aplicacion de express
-  const app : express.Express = express();
-
-  //CORS
-  app.use(cors())
-
-  //Middleware de seguridad: protege los headers http del servidor.
-  app.use(helmet());
-
-  //Se parsea el body a json
-  app.use(bodyParser.json());
-
-  //Se agregan las rutas.
-  routes(app);
 
   //Inicia el servidor.
   app.listen(config.APP_PORT, () => {
@@ -48,6 +41,7 @@ async function start() {
 
 // Ejecuta la inicializacion
 start();
+
 
 
 
