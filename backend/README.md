@@ -10,20 +10,20 @@ npm start
 # Detalles de la API
 
   ### Location
-  `Ruta: /v1/location`
-  `Metodo HTTP: GET`
-  `Descripcion: Metodo utilizado para obtener la ciudad del cliente segun su ip`
+    `Ruta: /v1/location`
+    `Metodo HTTP: GET`
+    `Descripcion: Metodo utilizado para obtener la ciudad del cliente segun su ip`
   
   #### Respuesta
 
-  { "city": "Quilmes" }
+    { "city": "Quilmes" }
 
    ### Current
-  `Ruta 1: /v1/current`
-  `Ruta 2: /v1/current/:city`
+    `Ruta 1: /v1/current`
+    `Ruta 2: /v1/current/:city`
 
-  `Metodo HTTP: GET`
-  `Descripcion: Metodo utilizado para obtener la informacion del clima actual segun la ip del cliente o cuidad`
+    `Metodo HTTP: GET`
+    `Descripcion: Metodo utilizado para obtener la informacion del clima actual segun la ip del cliente o cuidad`
   
   #### Respuesta
 
@@ -37,11 +37,11 @@ npm start
     "date": "23/10/2020" }
 
   ### Forecast
-  `Ruta 1: /v1/forecast`
-  `Ruta 2: /v1/forecast/:city`
+    `Ruta 1: /v1/forecast`
+    `Ruta 2: /v1/forecast/:city`
 
-  `Metodo HTTP: GET`
-  `Descripcion: Metodo utilizado para obtener la informacion del clima actual segun la ip del cliente o cuidad para los proximos 5 dias`
+    `Metodo HTTP: GET`
+    `Descripcion: Metodo utilizado para obtener la informacion del clima actual segun la ip del cliente o cuidad para los proximos 5 dias`
   
   #### Respuesta
 
