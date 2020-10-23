@@ -4,6 +4,9 @@ API encargada de disponer la informacion sobre el clima actual y sobre los proxi
 # Instalacion de dependencias
 npm install
 
+# Compilación 
+npm run compile
+
 # Comando para inicial la aplicacion
 npm start
 
