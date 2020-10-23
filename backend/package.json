@@ -7,7 +7,7 @@
     "compile": "tsc",
     "start-dev": "nodemon -e ts --ignore js/ --exec \"tsc && DEBUG=true node js/server.js\"",
     "start": "NODE_ENV=production node js/server.js",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
