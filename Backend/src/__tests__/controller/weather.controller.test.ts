@@ -4,7 +4,7 @@ import { app } from "../../server";
 describe("Test del controlador weather", () => {
 
   test("Test de la ruta /v1/location", async () => {
-    const response = await request(app).get("/v1/location");
+    const response = await request(app).get("/v1/location").set('X-Real-IP', '181.46.137.30');
 
     //Verificamos le estado del la respuesta
     expect(response.status).toBe(200);
@@ -17,7 +17,7 @@ describe("Test del controlador weather", () => {
   });
 
   test("Test de la ruta /v1/current", async () => {
-    const response = await request(app).get("/v1/current");
+    const response = await request(app).get("/v1/current").set('X-Real-IP', '181.46.137.30');
     expect(response.status).toBe(200);
 
     //Verificamos si los datos son correctos
