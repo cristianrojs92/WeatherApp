@@ -4,5 +4,5 @@ UI encargada de disponer la informacion sobre el clima actual y sobre los proxim
 # Instalacion de dependencias
 npm install
 
-# Comando para inicial la aplicacion
+# Comando para iniciar la aplicacion
 npm start
